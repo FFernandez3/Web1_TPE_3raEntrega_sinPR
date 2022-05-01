@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarme</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <div class="header">
@@ -14,26 +15,29 @@
         <ul>
             <li>Inicio</li>
             <li>Quienes somos</li>
-            <li> <a href="registrarme.html"></a> Registrarme</li>
+            <li>Registrarme</li>
         </ul>
     </div>
     <div>
        <form>
-           <div>
+           <div class="formulario">
                 <label for="">Nombre</label>
                 <input type="text" name="nombre" value=""/>
            </div>
-           <div>
+           <div class="formulario">
                 <label for="">Apellido</label>
                 <input type="text" name="apellido" value=""/>
            </div>
-           <div>
+           <div class="formulario">
                 <label for="">Email</label>
-                <input type="text" name="email" value=""/>
+                <input type="email" name="email" value=""/>
+           </div>
+           <div class="formulario">
+                <label for="">Mensaje</label>
+                <textarea maxlength="50" name="" id="" cols="30" rows="10"></textarea>
            </div>
            <div>
-                <label for="">Mensaje</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+               <button type="submit">Enviar</button>
            </div>
        </form>
     </div>
