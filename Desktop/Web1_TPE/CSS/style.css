@@ -1,7 +1,41 @@
 body {
     font-family: sans-serif;
+    
+}
+div.header {
+    font-family:  /*'Noto Serif KR', serif;*/ 'Square Peg', cursive;
+    text-align: center;
+    font-size: 40px;
+    color:red;
+    padding: 0px;
+}
+span.coreano {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 50px;
 }
 
+div.navigation{
+    background-color: white;
+    border-bottom: 5px solid blue;
+    text-align: center;
+    position: sticky;
+}
+li.item{
+    display: inline;
+    list-style: none;
+    padding: 20px;
+    margin: 10px;
+    color: red;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.content {
+    margin: 30px 200px
+}
+.post {
+    text-align: justify;
+}
 form {
     margin: 0 auto;
     width: 40%;
