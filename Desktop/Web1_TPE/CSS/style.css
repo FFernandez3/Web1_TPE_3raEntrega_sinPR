@@ -44,13 +44,16 @@ form {
 
 }
 
-button {
+button.enviar {
     height: 40px;
     width: 150px;
     margin-left: 35%;
     margin-top: 10px;
     border-radius: 3px;
-  
+}
+button.comprobar{
+    text-align: center;
+
 }
 
 label, input,textarea {
@@ -71,4 +74,12 @@ textarea {
     width: 92%;
     resize: none;
     padding-right: 15px;
+}
+
+.indicaciones, #resultado{
+    display: block;
+}
+#aleatorio, #nuevoCaptcha, #comprobar{
+    padding: 10%;
+    display: inline;
 }
