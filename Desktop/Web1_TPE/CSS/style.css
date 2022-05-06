@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+KR:wght@200&family=Square+Peg&display=swap');
 body {
-    font-family: sans-serif;
-    
+    font-family: 'Noto Serif', serif;
 }
 div.header {
-    font-family:  /*'Noto Serif KR', serif;*/ 'Square Peg', cursive;
+    font-family: 'Square Peg', cursive;
     text-align: center;
     font-size: 40px;
     color:red;
@@ -19,7 +18,7 @@ div.navigation{
     background-color: white;
     border-bottom: 5px solid blue;
     text-align: center;
-    position: sticky;
+    position: sticky; /* por que no se pone stiky el nav?*/
 }
 li.item{
     display: inline;
@@ -84,4 +83,23 @@ textarea {
 #aleatorio, #nuevoCaptcha, #comprobar{
     padding: 10%;
     display: inline;
+}
+table tr td{
+    border: 1px solid black ;
+    border-collapse: collapse;
+    text-align: justify;
+}
+tbody{
+    color: black;
+}
+thead{
+    color: red;
+    background-color: beige;
+    font-family: 'Square Peg', cursive;
+    font-size: 30px;
+   
+}
+
+table{  
+    width: 100%;
 }
