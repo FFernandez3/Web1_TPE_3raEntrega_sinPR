@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Square+Peg&display=swap');
 body {
     font-family: sans-serif;
     
@@ -44,22 +45,26 @@ form {
 
 }
 
-button {
+button.enviar {
     height: 40px;
     width: 150px;
     margin-left: 35%;
     margin-top: 10px;
     border-radius: 3px;
-  
+}
+button.comprobar{
+    text-align: center;
+
 }
 
-label, input,textarea {
+label, input, textarea {
     margin: 10px;
     border-radius: 3px;
 
 }
 
-input {
+form .formulario input {
+    width: 92%;
     height: 50px; 
 }
 
@@ -68,7 +73,15 @@ input {
     flex-direction: column;
 }
 textarea {
-    width: 92%;
+    width: 90%;
     resize: none;
     padding-right: 15px;
+}
+
+.indicaciones, #resultado{
+    display: block;
+}
+#aleatorio, #nuevoCaptcha, #comprobar{
+    padding: 10%;
+    display: inline;
 }

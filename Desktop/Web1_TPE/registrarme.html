@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarme</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link para el font del nombre pagina-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -24,31 +21,34 @@
     <div>
        <form>
            <div class="formulario">
+           <div>
                 <label for="">Nombre</label>
                 <input type="text" name="nombre" value=""/>
            </div>
-           <div class="formulario">
+           <div>
                 <label for="">Apellido</label>
                 <input type="text" name="apellido" value=""/>
            </div>
-           <div class="formulario">
+           <div>
                 <label for="">Email</label>
                 <input type="email" name="email" value=""/>
            </div>
-           <div class="formulario">
+           <div>
                 <label for="">Mensaje</label>
                 <textarea name="" id="" cols="30" rows="10"></textarea>
            </div>
-           <div>
-               <h3>Captcha</h3>
-                   <p>Ingresa el resultado de la suma que aparece a continuacion</p>
-                    <div id="suma"></div>
-                    <input id= "resultadoUsuario" type="number" name="number" value="">
-                    <button id="button">Sumar</button>
-                    <div id="resultado">El resultado es: </div>
+           <div class="captcha">
+               <!--<h3>Captcha</h3>-->
+                   <p class="indicaciones">Ingresa el numero que aparece a continuacion</p>
+                    <div id="aleatorio"></div>
+                    <input id= "resultadoUsuario" type="number" name="number" value="" placeholder="Ingrese captcha" required>
+                    <button id="comprobar">Comprobar</button>
+                    <button id="nuevoCaptcha">Cargar otra vez</button>
+                    <div id="resultado">Resultado</div>
            </div>
+        </div>
            <div>
-               <button type="submit">Enviar</button>
+               <button class="enviar" type="submit">Enviar</button>
            </div>
        </form>
     </div>
