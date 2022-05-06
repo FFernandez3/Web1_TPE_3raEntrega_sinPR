@@ -14,9 +14,8 @@ suma.innerHTML = num1+ "+" +num2;
 let ingreso = document.querySelector("#resultadoUsuario").value;
 console.log(ingreso);
 
-
-
 function captcha() {
+   
     if(ingreso == resultadoSuma){
         resultado.innerHTML = "El resultado es correcto";
         console.log(resultado);
