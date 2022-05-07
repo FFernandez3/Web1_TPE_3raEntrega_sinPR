@@ -1,31 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+KR:wght@200&family=Square+Peg&display=swap');
 body {
     font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+div.head {
+    height: 80%;
+    background-color: blue;
+    /*background-image: url("../img/corea.jpg");*/
+    width: auto;
+    
 }
 div.header {
-    font-family: 'Square Peg', cursive;
+   font-family: 'Square Peg', cursive;
     text-align: center;
     font-size: 40px;
-    color:red;
-    padding: 0px;
+    color: red;
+    border-bottom: white solid 1px;
+    
+}
+.header h1 {
+    margin: 0;
 }
 span.coreano {
     font-family: 'Noto Serif KR', serif;
     font-size: 50px;
 }
 
-div.navigation{
-    background-color: white;
-    border-bottom: 5px solid blue;
+div.navigation {
+    border-bottom: 5px solid darkblue;
     text-align: center;
     position: sticky; /* por que no se pone stiky el nav?*/
+    
 }
-li.item{
+.item a {
+    color: red;
+    text-decoration: none;
+}
+li.item {
     display: inline;
     list-style: none;
-    padding: 20px;
+    /*padding: 20px;*/
     margin: 10px;
-    color: red;
     text-transform: uppercase;
     font-size: 15px;
 }
@@ -33,9 +49,25 @@ li.item{
 .content {
     margin: 30px 200px
 }
-.post {
-    text-align: justify;
+.estrenos, .post1 {
+    border-bottom: 3px solid black; 
 }
+.estrenos .post1 {
+    text-align: justify;
+   
+}
+.content .post1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.post1 .reseña1 {
+    margin-right: 10px;;
+}
+.tituloReseña h3 {
+    font-size: 25px;
+}
+
 form {
     margin: 0 auto;
     width: 40%;
@@ -103,3 +135,13 @@ thead{
 table{  
     width: 100%;
 }
+div.footer {
+    padding-top: 20px;
+    height: 80px;
+    background-color: blue;
+    text-align: center;
+}
+.copyright h4 {
+    margin: 0;
+}
+
