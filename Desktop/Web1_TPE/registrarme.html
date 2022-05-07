@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Registrarme</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
     <div class="head">
         <div class="header">
@@ -21,47 +23,49 @@
         </div>
     </div>
     <div>
-       <form>
-           <div class="formulario">
-           <div>
-                <label for="">Nombre</label>
-                <input type="text" name="nombre" value=""/>
-           </div>
-           <div>
-                <label for="">Apellido</label>
-                <input type="text" name="apellido" value=""/>
-           </div>
-           <div>
-                <label for="">Email</label>
-                <input type="email" name="email" value=""/>
-           </div>
-           <div>
-                <label for="">Mensaje</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-           </div>
-           <div class="captcha">
-               <!--<h3>Captcha</h3>-->
-                   <p class="indicaciones">Ingresa el numero que aparece a continuacion</p>
+        <form>
+            <div class="formulario">
+                <div>
+                    <label for="">Nombre</label>
+                    <input type="text" name="nombre" value="" />
+                </div>
+                <div>
+                    <label for="">Apellido</label>
+                    <input type="text" name="apellido" value="" />
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="email" value="" />
+                </div>
+                <div>
+                    <label for="">Mensaje</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="captcha">
+                    <!--<h3>Captcha</h3>-->
+                    <p class="indicaciones">Ingresa el numero que aparece a continuacion</p>
                     <div id="aleatorio"></div>
-                    <input id= "resultadoUsuario" type="number" name="number" value="" placeholder="Ingrese captcha" required>
+                    <input id="resultadoUsuario" type="number" name="number" value="" placeholder="Ingrese captcha"
+                        required>
                     <button id="comprobar">Comprobar</button>
                     <button id="nuevoCaptcha">Cargar otra vez</button>
                     <div id="resultado">Resultado</div>
-           </div>
-        </div>
-           <div>
-               <button class="enviar" type="submit">Enviar</button>
-           </div>
-       </form>
+                </div>
+            </div>
+            <div>
+                <button class="enviar" type="submit">Enviar</button>
+            </div>
+        </form>
     </div>
     <div class="footer">
         <div class="copyright">
             <h4>Todos los derechos reservados</h4>
         </div>
         <div class="redes">
-            
+
         </div>
-    </div>  
-    <script src="js/script.js"></script>   
+    </div>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

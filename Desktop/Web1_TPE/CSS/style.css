@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+KR:wght@200&family=Square+Peg&display=swap');
+
 body {
     font-family: 'Noto Serif', serif;
     margin: 0;
@@ -11,17 +12,20 @@ div.head {
     width: auto;
     
 }
+
 div.header {
    font-family: 'Square Peg', cursive;
     text-align: center;
     font-size: 40px;
     color: red;
+
     border-bottom: white solid 1px;
     
 }
 .header h1 {
     margin: 0;
 }
+
 span.coreano {
     font-family: 'Noto Serif KR', serif;
     font-size: 50px;
@@ -37,6 +41,7 @@ div.navigation {
     color: red;
     text-decoration: none;
 }
+
 li.item {
     display: inline;
     list-style: none;
@@ -46,6 +51,19 @@ li.item {
     font-size: 15px;
 }
 
+img {
+    height: 300px;
+    width: 215px;
+    border-radius: 5px;
+}
+
+div.ficha {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
 .content {
     margin: 30px 200px
 }
@@ -53,6 +71,10 @@ li.item {
     border-bottom: 3px solid black; 
 }
 .estrenos .post1 {
+
+}
+
+.post {
     text-align: justify;
    
 }
@@ -83,7 +105,8 @@ button.enviar {
     margin-top: 10px;
     border-radius: 3px;
 }
-button.comprobar{
+
+button.comprobar {
     text-align: center;
 
 }
@@ -97,42 +120,51 @@ label, input, textarea {
 form .formulario input {
     width: 92%;
     height: 50px; 
+
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
 }
+
 textarea {
     width: 90%;
     resize: none;
     padding-right: 15px;
 }
 
-.indicaciones, #resultado{
+.indicaciones,
+#resultado {
     display: block;
 }
-#aleatorio, #nuevoCaptcha, #comprobar{
+
+#aleatorio,
+#nuevoCaptcha,
+#comprobar {
     padding: 10%;
     display: inline;
 }
-table tr td{
-    border: 1px solid black ;
+
+table tr td {
+    border: 1px solid black;
     border-collapse: collapse;
     text-align: justify;
 }
-tbody{
+
+tbody {
     color: black;
 }
-thead{
+
+thead {
     color: red;
     background-color: beige;
     font-family: 'Square Peg', cursive;
     font-size: 30px;
-   
+
 }
 
-table{  
+table {
     width: 100%;
 }
 div.footer {
