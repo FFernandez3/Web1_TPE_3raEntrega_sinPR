@@ -29,6 +29,17 @@ li.item{
     text-transform: uppercase;
     font-size: 15px;
 }
+img{
+    height: 300px;
+    width: 215px;
+    border-radius: 5px;
+}
+div.ficha {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
 
 .content {
     margin: 30px 200px
