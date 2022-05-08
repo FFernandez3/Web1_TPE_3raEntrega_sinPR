@@ -12,12 +12,12 @@
 <body>
     <div class="head">
         <div class="header">
-            <h1>Kimchi para dos</h1>
+            <h1><span class= "coreano"> 김치 </span> para dos</h1>
         </div>
         <div class="navigation">
             <ul>
                 <li class="item"> <a href="index.html">Inicio</a></li>
-                <li class="item"><a href="recomendados.html">Mis favoritos</a></li>
+                <li class="item"><a href="recomendados.html">Recomendados</a></li>
                 <li class="item"> <a href="registrarme.html">Registrarme</a> </li>
             </ul>
         </div>
@@ -42,17 +42,18 @@
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div class="captcha">
-                    <!--<h3>Captcha</h3>-->
+                    <h3>Captcha</h3>
                     <p class="indicaciones">Ingresa el numero que aparece a continuacion</p>
                     <div id="aleatorio"></div>
-                    <input id="resultadoUsuario" type="number" name="number" value="" placeholder="Ingrese captcha"
-                        required>
-                    <button id="comprobar">Comprobar</button>
-                    <button id="nuevoCaptcha">Cargar otra vez</button>
+                    <div class="numeroIngresado">
+                        <input id="resultadoUsuario" type="number" name="number" value="" placeholder="Ingrese captcha" required>  
+                        <button id="comprobar">Comprobar</button>
+                        <button id="nuevoCaptcha">Cargar otra vez</button>
+                    </div>
                     <div id="resultado">Resultado</div>
                 </div>
             </div>
-            <div>
+            <div class="buttonEnviar">
                 <button class="enviar" type="submit">Enviar</button>
             </div>
         </form>

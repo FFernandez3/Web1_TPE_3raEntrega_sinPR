@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 div.head {
+    margin-bottom: 50px;
     height: 80%;
     background-color: blue;
     /*background-image: url("../img/corea.jpg");*/
@@ -40,6 +41,9 @@ div.navigation {
 .item a {
     color: red;
     text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    
 }
 
 li.item {
@@ -98,18 +102,6 @@ form {
 
 }
 
-button.enviar {
-    height: 40px;
-    width: 150px;
-    margin-left: 35%;
-    margin-top: 10px;
-    border-radius: 3px;
-}
-
-button.comprobar {
-    text-align: center;
-
-}
 
 label, input, textarea {
     margin: 10px;
@@ -119,7 +111,7 @@ label, input, textarea {
 
 form .formulario input {
     width: 92%;
-    height: 50px; 
+    height: 40px; 
 
 }
 
@@ -134,22 +126,50 @@ textarea {
     padding-right: 15px;
 }
 
-.indicaciones,
-#resultado {
-    display: block;
+div.captcha{
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 10px;
+    width: 90%;
+    
+
+}
+.captcha .numeroIngresado {
+    display: flex;
+    flex-direction: row;
 }
 
-#aleatorio,
-#nuevoCaptcha,
-#comprobar {
-    padding: 10%;
-    display: inline;
+.numeroIngresado #resultadoUsuario {
+    width: 40%;
+    margin-right: 20px;
+
+}
+.captcha h3, .indicaciones, #aleatorio, #resultado {
+    margin-left:10px;
+}
+div#aleatorio {
+    font-size: 25px;
+    font-weight: bold;
+}
+button#comprobar {
+    margin-right: 10px;
+}
+
+ .enviar, #comprobar, #nuevoCaptcha  {
+    height: 40px;
+    width: 120px;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+.buttonEnviar {
+    display: flex;
+    justify-content: center;
 }
 
 table tr td {
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
-    text-align: justify;
+    text-align: center;
 }
 
 tbody {
@@ -158,9 +178,10 @@ tbody {
 
 thead {
     color: red;
-    background-color: beige;
     font-family: 'Square Peg', cursive;
     font-size: 30px;
+    font-weight: bold;
+    
 
 }
 
@@ -169,6 +190,7 @@ table {
 }
 div.footer {
     padding-top: 20px;
+    margin-top: 50px;
     height: 80px;
     background-color: blue;
     text-align: center;
