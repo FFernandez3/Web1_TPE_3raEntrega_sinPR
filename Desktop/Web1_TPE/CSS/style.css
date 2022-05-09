@@ -14,7 +14,7 @@ div.head {
     
 }
 
-div.header {
+div.header, div.post h2 {
    font-family: 'Square Peg', cursive;
     text-align: center;
     font-size: 40px;
@@ -55,43 +55,39 @@ li.item {
     font-size: 15px;
 }
 
-img {
+.imagen img {
     height: 300px;
     width: 215px;
     border-radius: 5px;
 }
 
-div.ficha {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+.content, .footer {
+    margin: 30px 200px;
 }
 
-.content {
-    margin: 30px 200px
-}
-.estrenos, .post1 {
-    border-bottom: 3px solid black; 
-}
-.estrenos .post1 {
-
-}
-
-.post {
+div.post {
     text-align: justify;
-   
+    border-bottom: 2px solid black;
+
 }
-.content .post1 {
-    display: flex;
-    flex-direction: row;
+div.post h2 {
+    text-align: left;
 }
 
-.post1 .reseña1 {
-    margin-right: 10px;;
+div.estreno, div.resenia{ 
+   /* padding: 30px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
 }
-.tituloReseña h3 {
-    font-size: 25px;
+div.descripcionDrama {
+    width: 650px;
+}
+
+ h3.tituloDrama {
+    font-size: 20px;
+    display: block;
 }
 
 form {
@@ -166,12 +162,6 @@ button#comprobar {
     justify-content: center;
 }
 
-table tr td {
-    border: 2px solid black;
-    border-collapse: collapse;
-    text-align: center;
-}
-
 tbody {
     color: black;
 }
@@ -181,21 +171,39 @@ thead {
     font-family: 'Square Peg', cursive;
     font-size: 30px;
     font-weight: bold;
-    
-
 }
 
 table {
     width: 100%;
 }
-div.footer {
-    padding-top: 20px;
-    margin-top: 50px;
-    height: 80px;
-    background-color: blue;
+table tr td {
+    border: 2px solid black;
+    border-collapse: collapse;
     text-align: center;
 }
-.copyright h4 {
-    margin: 0;
+div.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+   /*padding-top: 20px;*/
+   /* margin-top: 50px;*/
+    /*height: 80px;*/
+  /* background-color: blue;*/
+
+    
 }
 
+div.redes {
+   margin: 0;
+   height: 50px;
+   width: 50%;
+   display: flex;
+   justify-content: right;
+}
+div.redes img {
+     height: 50px ;
+   width: 50px;
+  padding: 5px 5px;
+  border-radius: 35px;
+}

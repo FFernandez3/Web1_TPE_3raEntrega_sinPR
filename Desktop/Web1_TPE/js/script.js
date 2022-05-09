@@ -31,8 +31,6 @@ function valorAletorio() {
         } //cuatro segundos
         else {
             res.innerHTML = "¡Incorrecto! Volve a intentarlo.";
-
-
         }
     }
 }
