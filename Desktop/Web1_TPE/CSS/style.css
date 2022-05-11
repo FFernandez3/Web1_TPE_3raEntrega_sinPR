@@ -141,7 +141,7 @@ div#aleatorio {
 button#comprobar {
     margin-right: 10px;
 }
-.enviar, #comprobar, #nuevoCaptcha  {
+#enviar, #comprobar, #nuevoCaptcha  {
     height: 40px;
     width: 120px;
     margin-top: 15px;
@@ -150,6 +150,9 @@ button#comprobar {
 .buttonEnviar {
     display: flex;
     justify-content: center;
+}
+.ocultar {
+    display: none;
 }
 
 thead {
