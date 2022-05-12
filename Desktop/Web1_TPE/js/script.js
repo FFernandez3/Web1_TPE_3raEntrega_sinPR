@@ -26,33 +26,14 @@ function valorAletorio() {
         if (entrada == num) {
             res.innerHTML = "¡Correcto! No sos un robot.";
             mostrarBoton();
-            /*OTRA OPCION
-            setTimeout(removerResultado, 4000); 
-             setTimeout(valorAletorio, 4000);*/
-          /*   setTimeout(() => {
-                removerResultado();
-                valorAletorio();
-            }
-                , 4000)
-                console.log("se ejecuto set time out"); */
-        } //cuatro segundos
+        }
         else {
             res.innerHTML = "¡Incorrecto! Volve a intentarlo.";
-            ocultarBoton();
-            setTimeout(() => {
-                removerResultado();
-                valorAletorio();
-            }
-                , 4000)
-                console.log("se ejecuto set time out");
-        }
+            ocultarBoton();        
+         }
     }
 }
 
-function removerResultado() {
-    res.innerHTML = "";
-    ingreso.value = "";
-}
 function mostrarBoton(){
     document.getElementById("enviar").classList.remove("ocultar");
     console.log("aplica mostrar boton")
