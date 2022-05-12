@@ -5,7 +5,6 @@ body {
     margin: 0;
     padding: 0;
     border: 20px solid lightpink;
-
 }
 
 div.header {
@@ -13,7 +12,6 @@ div.header {
     height: 80%;
     border-bottom: 1px solid lightgray;
     width: auto;   
-
 }
 
 div.post h2, div.content h1,.item a, thead {
@@ -21,7 +19,7 @@ div.post h2, div.content h1,.item a, thead {
 }
 
 div.nombrePag, div.post h2, div.content h1 {
-   font-family: 'Square Peg', cursive;
+    font-family: 'Square Peg', cursive;
     text-align: left;
     font-size: 45px;  
 }
@@ -30,11 +28,13 @@ div.nombrePag, div.post h2, div.content h1 {
     margin: 0;
     color: white;
 }
+
 div.nombrePag{
     border-bottom: 1px solid white;
     text-align: center;
     background-image: url(../img/fondo.jpg);
 }
+
 span.coreano {
     font-family: 'Noto Serif KR', serif;
     font-size: 50px;
@@ -43,15 +43,14 @@ span.coreano {
 div.navigation {
     display: flex;
     justify-content: center;
-    background-color: #ffe0e9;
-    
+    background-color: #ffe0e9;   
 }
 .item a {
     text-decoration: none;
     padding-left: 30px;
-    padding-right: 30px;
-    
+    padding-right: 30px;    
 }
+
 li.item {
     display: inline;
     list-style: none;
@@ -60,9 +59,9 @@ li.item {
     font-size: 15px;
 
 }
+
 li.item :hover{
-   font-size: 18px;
-  
+   font-size: 18px;  
 }
 
 .imagen img {
@@ -70,23 +69,27 @@ li.item :hover{
     width: 215px;
     border-radius: 5px;
 }
+
 .content, .footer {
     margin: 30px 200px;
 }
+
 div.post {
     text-align: justify;
     border-bottom: 2px solid black;
 }
+
 div.estreno, div.resenia{ 
-   /* padding: 30px;*/
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
 }
+
 div.descripcionDrama {
     width: 650px;
 }
+
  h3.tituloDrama {
     font-size: 20px;
     display: block;
@@ -99,62 +102,76 @@ form {
     border: 3px solid black;
     background-color: #ffe0e9;
 }
+
 label, input, textarea {
     margin: 10px;
     border-radius: 3px;
 }
+
 form .formulario input {
     width: 92%;
     height: 40px; 
 }
-input::selection, textarea::selection{
+
+input::selection, textarea::selection {
     background-color: #ffe0e9;
     color: #45484a;
 }
+
 .formulario {
     display: flex;
     flex-direction: column;
     
 }
+
 textarea {
     width: 90%;
     resize: none;
     padding-right: 15px;
 }
+
 div.captcha{
     border: 2px solid black;
     padding: 10px;
     margin-left: 10px;
     width: 90%;  
 }
+
 .captcha .numeroIngresado {
     display: flex;
     flex-direction: row;
 }
+
 .numeroIngresado #resultadoUsuario {
     width: 40%;
     margin-right: 20px;
 }
+
 .captcha h3, .indicaciones, #aleatorio, #resultado {
     margin-left:10px;
 }
+
 div#aleatorio {
     font-size: 25px;
     font-weight: bold;
 }
+
 button#comprobar {
     margin-right: 10px;
 }
+
 #enviar, #comprobar, #nuevoCaptcha  {
     height: 40px;
     width: 120px;
     margin-top: 15px;
     border-radius: 3px;
 }
+
 .buttonEnviar {
     display: flex;
     justify-content: center;
 }
+
 .ocultar {
     display: none;
 }
@@ -180,10 +197,6 @@ div.footer {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-   /*padding-top: 20px;*/
-   /* margin-top: 50px;*/
-    /*height: 80px;*/
-  /* background-color: blue;*/ 
 }
 
 div.redes {
