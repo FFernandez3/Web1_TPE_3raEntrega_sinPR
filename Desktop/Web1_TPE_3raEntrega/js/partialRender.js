@@ -58,5 +58,5 @@ function cargar(id){
     select_tab(id);
     document.title=id; //se va a cambiar el nombre del tab
     load_content(id);
-    window.history.pushState({id}, `${id}`, `/page/${id}`); //cambia la URL
+    window.history.pushState({id}, `${id}`, `/${id}`); //cambia la URL
 }
