@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", iniciarPagina);
 function iniciarPagina() {
-   "use strict";
+    "use strict";
     document.querySelector("#btn-mostrar").addEventListener("click", mostrar_tabla);
-    document.querySelector("#btn-agregar").addEventListener("click", cargar_datos);
+    let form = document.querySelector("#form");
+    form.addEventListener("submit", cargar_datos);
     const URL = "https://62b617a46999cce2e8fee570.mockapi.io/Dramas";
-    /* obtener_e_imprimir_datos(); */
+
     const tabla = document.querySelector("#cuerpoTabla");
     async function mostrar_tabla() {
         /*  event.preventDefault(); */  /*SI SE LO PONGO NO CARGA LA PAG AL INICIO */
@@ -47,24 +48,11 @@ function iniciarPagina() {
                     </tr>`
     }
 
-    async function cargar_datos() {
+    async function cargar_datos(event) {
         //agarro los valores de los inputs
         console.log("se ejecuta cargar datos");
         event.preventDefault();
-        let genero = document.querySelector("#genero").value;
-        let titulo = document.querySelector("#titulo").value;
-        let anio = document.querySelector("#año").value;
-        let capitulos = document.querySelector("#capitulos").value;
-        let estado = document.querySelector("#estado").value;
-        let drama = {
-            "thing": {
-                "generoDrama": genero,
-                "tituloDrama": titulo,
-                "anioDrama": anio,
-                "capDrama": capitulos,
-                "estadoDrama": estado
-            }
-        }
+        let drama = obtener_datos_inputs();
         try {
             let response = await fetch(URL, {         //debo darle un parametro de opciones que es un json, 
                 "method": "POST",
@@ -76,30 +64,29 @@ function iniciarPagina() {
 
             let nuevoDrama = await response.json(); //(lo q recibo lo desconvierto de texto a json) ESTO LO HAGO DESPUES  EN OBTENER DATOS     
             //como remplazo esto para q no se cargue toda la pag de nuevo???????????????????
-            mostrar_tabla(nuevoDrama);
+            mostrarLinea(nuevoDrama);
         }
         catch (error) {
             console.log(error);
         }
     }
+    function obtener_datos_inputs() {
+        let formData = new FormData(form);
+        let genero = formData.get("genero");
+        let titulo = formData.get("titulo");
+        let anio = formData.get("año");
+        let capitulos = formData.get("capitulos");
+        let estado = formData.get("estado");
 
-    /* function asignarEditarBotones() {
-        let botones = document.querySelectorAll(".btn-editar");
-        for (const boton of botones) {
-            boton.addEventListener("click", function () {
-                editar_fila(boton);
-            })
+        let drama = {
+            "generoDrama": genero,
+            "tituloDrama": titulo,
+            "anioDrama": anio,
+            "capDrama": capitulos,
+            "estadoDrama": estado
         }
+        return drama;
     }
-    
-    function aisignarEliminaraBotones() {
-        let botones = document.querySelectorAll(".btn-borrarFila");
-        for (const boton of botones) {
-            boton.addEventListener("click", function () {
-                borrar_fila(boton);
-            });
-        }
-    } */
 
     async function borrar_fila(boton) {
         /*  let id=this.dataset.dramaId;  */
@@ -121,20 +108,7 @@ function iniciarPagina() {
     async function editar_fila(boton) {
         let id = boton.getAttribute("data-id");
         event.preventDefault();
-        let genero = document.querySelector("#genero").value;
-        let titulo = document.querySelector("#titulo").value;
-        let anio = document.querySelector("#año").value;
-        let capitulos = document.querySelector("#capitulos").value;
-        let estado = document.querySelector("#estado").value;
-        let drama = {
-            "thing": {
-                "generoDrama": genero,
-                "tituloDrama": titulo,
-                "anioDrama": anio,
-                "capDrama": capitulos,
-                "estadoDrama": estado
-            }
-        }
+        let drama = obtener_datos_inputs();
         try {
             let response = await fetch(URL + "/" + id, {         //debo darle un parametro de opciones que es un json, 
                 "method": "PUT",
@@ -145,7 +119,7 @@ function iniciarPagina() {
             });
 
             let nuevoDrama = await response.json();
-            mostrar_tabla();
+            /* mostrar_tabla(); */ //si lo pongo me lo ejecuta en loop 
         }
         catch (error) {
             console.log(error);
