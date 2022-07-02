@@ -2,15 +2,18 @@ document.addEventListener("DOMContentLoaded", iniciarPaginaTabla);
 function iniciarPaginaTabla() {
     "use strict";
     let divResultado=document.querySelector("#resultadoOperacion");
-    document.querySelector("#btn-mostrar").addEventListener("click", mostrar_tabla);
+    //document.querySelector("#btn-mostrar").addEventListener("click", mostrar_tabla);
     let form = document.querySelector("#form");
     form.addEventListener("submit", cargar_datos);
     const URL = "https://62b617a46999cce2e8fee570.mockapi.io/Dramas";
 
     const tabla = document.querySelector("#cuerpoTabla");
+    mostrar_tabla();
+
     async function mostrar_tabla() {
         /*  event.preventDefault(); */  /*SI SE LO PONGO NO CARGA LA PAG AL INICIO */
         try {
+            let response = await fetch(URL);
             if(response.ok){
                 let json = await response.json(); /*lo q trae es el json stringifiado que le mande en cargar_datos, y lo vuelve a convertir a json */
                 tabla.innerHTML = " ";
@@ -40,7 +43,7 @@ function iniciarPaginaTabla() {
         let titulo = drama.tituloDrama;
         let anio = drama.anioDrama;
         let capitulos = drama.capDrama;
-        let estado = drama.thing.estadoDrama;
+        let estado = drama.estadoDrama;
         let id = drama.id;
 
         tabla.innerHTML += `<tr>

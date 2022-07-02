@@ -1,0 +1,23 @@
+<form class="formulario">
+    <label for="">Nombre</label>
+    <input class="inputRegistrarme" type="text" name="nombre" value="" required />
+    <label for="">Apellido</label>
+    <input class="inputRegistrarme" type="text" name="apellido" value="" />
+    <label for="">Email</label>
+    <input class="inputRegistrarme" type="email" name="email" value="" required />
+    <label for="">Mensaje</label>
+    <textarea class="textArea" name="mensaje" id="" cols="30" rows="10"></textarea>
+    <div class="captcha">
+        <h2>Captcha</h2>
+        <p class="indicaciones">Ingresa el número que aparece a continuación</p>
+        <div id="aleatorio"></div>
+        <div class="numeroIngresado">
+            <input class="inputForm" id="resultadoUsuario" type="number" name="number" value=""
+                placeholder="Ingrese captcha" required>
+            <button class="button" id="comprobar">Chequea</button>
+            <button class="button" id="nuevoCaptcha">Recargá</button>
+        </div>
+        <div id="resultado">Resultado</div>
+        <button class="buttonEnviar" id="enviar" type="submit">Enviar</button>
+    </div>
+</form>

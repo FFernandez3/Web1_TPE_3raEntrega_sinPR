@@ -18,7 +18,10 @@ async function load_content(id){
             let content =await response.text();
             contenedor.innerHTML=content;
             if(id=="recomendados"){
-                agregarScripts();
+                iniciarPaginaTabla();
+            }
+            else if(id=="registrarme"){
+                iniciarPaginaCaptcha();
             }
            
         }
