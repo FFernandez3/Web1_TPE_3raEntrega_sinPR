@@ -1,15 +1,15 @@
 window.onload=(event)=>{ //cuando inicie la pag
-    /* window["about"].addEventListener("DOMContentLoaded", (event)=>push(event)); */
+    
     window["inicio"].addEventListener("click", (event)=>push(event));
     window["recomendados"].addEventListener("click", (event)=>push(event));
     window["registrarme"].addEventListener("click", (event)=>push(event));
-    cargar("inicio"); //que aparezca about cuando se inicia 
+    cargar("inicio"); 
 }
-function select_tab(id){
+/* function select_tab(id){ no sirve, pq no cambio colores de divs como en el video
     document.querySelectorAll(".route").forEach((item)=>item.classList.remove("selected"));
     document.querySelectorAll("#" + id).forEach((item)=>item.classList.add("selected"));
 
-}
+} */
 async function load_content(id){
     let response=await fetch(`${window.location.origin}/${id}.html`); 
     let contenedor= document.querySelector("#content");
@@ -22,8 +22,7 @@ async function load_content(id){
             }
             else if(id=="registrarme"){
                 iniciarPaginaCaptcha();
-            }
-           
+            } 
         }
         else {
            contenedor.innerHTML="Error loading for /"+ id+"...";
@@ -32,8 +31,6 @@ async function load_content(id){
     catch(error){
         contenedor.innerHTML="Error";
     }
-   
-
 }
 /* function agregarScripts(){
     let div =document.querySelector("#scripts");
@@ -45,7 +42,7 @@ async function load_content(id){
 window.addEventListener("popstate", (event)=>{ 
     let stateId=event.state.id; //agarro el estado anterior
     console.log("stateId =", stateId);
-    select_tab(stateId); //agarro el tab del contenido anterior
+   /*  select_tab(stateId); */ //agarro el tab del contenido anterior
     load_content(stateId); //agarro el contenido anterior
 })
 function push (event){
@@ -58,7 +55,7 @@ function push (event){
 
 }
 function cargar(id){
-    select_tab(id);
+    /* select_tab(id); */
     document.title=id; //se va a cambiar el nombre del tab
     load_content(id);
     window.history.pushState({id}, `${id}`, `/${id}`); //cambia la URL
