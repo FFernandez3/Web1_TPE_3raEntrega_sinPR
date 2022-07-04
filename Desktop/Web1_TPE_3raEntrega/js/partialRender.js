@@ -35,12 +35,12 @@ async function load_content(id){
    
 
 }
-function agregarScripts(){
+/* function agregarScripts(){
     let div =document.querySelector("#scripts");
     div.innerHTML="<script src='js/tablaApiRest.js'></script>";
     console.log("Se ejecuta agregar scripts");
     
-}
+} */
 //para volver a la pagina anterior
 window.addEventListener("popstate", (event)=>{ 
     let stateId=event.state.id; //agarro el estado anterior
